@@ -11,7 +11,7 @@ import transferencias_vehiculares from "../public/images/transferencias_vehicula
 import Link from 'next/link'
 export default function Servicios() {
   return (
-    <section className='block w-full box-border '>
+    <section className='block w-full'>
       <div className='flex gap-10 flex-wrap justify-center 2xl:justify-start'>
         
         <div className='flex flex-col w-[calc(90%-2rem)] lg:w-[calc(50%-2rem)] 2xl:w-[calc(33.33%-2rem)] border-neutral-100 border-2 rounded-xl p-6 cursor-pointer justify-between'>
