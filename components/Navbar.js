@@ -33,7 +33,7 @@ export default function Navbar() {
      
         <div className={` fixed overflow-hidden  top-0 bottom-0  left-0 duration-500  ${visibility.value? "right-0 ":"right-full"} bg-primary z-10 box-border`}>
           <X onClick={close} className='lg:hidden cursor-pointer text-5xl block text-white absolute right-4 top-4'/>
-          <ul className='h-full py-20 gap-4 flex flex-col text-sm justify-between items-stretch whitespace-nowrap'>
+          <ul className='h-full py-20 gap- flex flex-col text-sm justify-center items-stretch whitespace-nowrap'>
             <NavbarItemSmall onclick={close} link={"/"} text="Inicio" />
             <NavbarItemSmall onclick={close} link={"/servicios"} text="Servicios Notariales" />
             <NavbarItemSmall onclick={close} link={"/requisitos"} text="Requisitos" />

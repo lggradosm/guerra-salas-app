@@ -9,8 +9,7 @@ export default function NavbarItemSmall({link,text,onclick}) {
             return true;
         return false;
     }
-    console.log(router.asPath);
   return (
-    <li className={` h-full  text-white ${isActive()?"font-bold underline":""}`}><Link href={link} onClick={onclick} className=" h-full w-full flex items-center justify-center" >{text}</Link></li>
+    <li className={` p-6 text-white ${isActive()?"font-bold underline":""}`}><Link href={link} onClick={onclick} className=" h-full w-full flex items-center justify-center" >{text}</Link></li>
   )
 }
