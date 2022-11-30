@@ -10,6 +10,6 @@ export default function NavbarItemSmall({link,text,onclick}) {
         return false;
     }
   return (
-    <li className={` p-6 text-white ${isActive()?"font-bold underline":""}`}><Link href={link} onClick={onclick} className="bg-blue-h-full w-full flex items-center justify-center" >{text}</Link></li>
+    <li className={`  text-white ${isActive()?"font-bold underline":""}`}><Link href={link} onClick={onclick} className="p-6 w-full flex items-center justify-center" >{text}</Link></li>
   )
 }
