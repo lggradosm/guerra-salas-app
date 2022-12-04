@@ -8,7 +8,6 @@ export default function NavbarItem({ link, text }) {
     if (router.asPath === link) return true;
     return false;
   };
-  console.log(router.asPath);
   return (
     <li>
       <Link

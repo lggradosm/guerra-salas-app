@@ -11,12 +11,8 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     <Navbar />
-    
-    <main className=' flex relative items-center  flex-col '>
-      <div className='w-[90%] md:w-[80%] xl:w-[70%] 2xl:w-[60%] '>
+    <main className='flex relative items-center  flex-col'>
         <Component {...pageProps} />
-      </div>
-      
     </main>
     <Footer />
   </div>

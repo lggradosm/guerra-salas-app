@@ -8,15 +8,12 @@ export default function NavbarItemSmall({ link, text, onclick }) {
     if (router.asPath === link) return true;
     return false;
   };
-  console.log(router.asPath);
   return (
-    <li>
+    <li className={`  text-white ${isActive() ? "font-bold underline" : ""}`}>
       <Link
         href={link}
         onClick={onclick}
-        className={`h-full p-3 text-white ${
-          isActive() ? "font-bold underline" : ""
-        } flex items-center justify-center`}
+        className="p-6 w-full flex items-center justify-center"
       >
         {text}
       </Link>
