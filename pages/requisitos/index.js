@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { requisitoFetch } from "../../hooks/requisitoFetch";
 import { Search } from "react-bootstrap-icons";
-export default function requisitos() {
+export default function Requisitos() {
   const { filterList, search, filterByCategory } = requisitoFetch();
   const [category, setCategory] = useState("todos");
   const onChangeHandler = (e) => {
