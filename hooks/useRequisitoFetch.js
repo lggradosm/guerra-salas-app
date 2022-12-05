@@ -6,7 +6,7 @@ export const useRequisitoFetch = () => {
   const [filterList, setFilterList] = useState(null);
   useEffect(() => {
     setLoading(true);
-    fetch("/api/requisitos")
+    fetch("/api/requisito")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
