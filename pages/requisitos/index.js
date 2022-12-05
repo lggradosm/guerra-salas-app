@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useRequisitoFetch } from "../../hooks/useRequisitoFetch";
+import { requisitoFetch } from "../../hooks/requisitoFetch";
 export default function requisitos() {
-  const { filterList, search } = useRequisitoFetch();
+  const { filterList, search } = requisitoFetch();
   const [searchText, setSearchText] = useState("");
   const onChangeHandler = (e) => {
     search(e.target.value);
