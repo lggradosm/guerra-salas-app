@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { requisitoFetch } from "../../hooks/requisitoFetch";
 export default function requisitos() {
   const { filterList, search } = requisitoFetch();
-  const [searchText, setSearchText] = useState("");
   const onChangeHandler = (e) => {
     search(e.target.value);
   };
