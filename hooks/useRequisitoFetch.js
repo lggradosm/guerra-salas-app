@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useRequisitos = () => {
+export const useRequisitoFetch = () => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [filterList, setFilterList] = useState(null);
