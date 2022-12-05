@@ -101,7 +101,7 @@ export default function Home() {
             {equipoList.map((employee, index) => (
               <div
                 key={index}
-                className="w-[49%] md:w-1/4 xl:w-1/6 text-center border-2 rounded-lg group cursor-pointer p-2"
+                className="w-1/2 md:w-1/4 xl:w-1/6 text-center border-2 rounded-lg group cursor-pointer p-2"
               >
                 <Image
                   alt={employee.nombre}
