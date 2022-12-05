@@ -1,8 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import NavbarItem from "./NavbarItem";
 import NavbarItemSmall from "./NavbarItemSmall";
-
+import Image from "next/image";
+import whatsapp from "../public/icons/whatsapp.svg";
+import Link from "next/link";
 import { List, X } from "react-bootstrap-icons";
 import { useBoolean } from "../hooks/useBoolean";
 export default function Navbar() {
@@ -18,7 +19,7 @@ export default function Navbar() {
 
   const visibility = useBoolean();
   return (
-    <nav className="h-24 w-full  text-primary flex justify-between items-center  p-10 xl:px-40  overflow-hidden">
+    <nav className="h-24 w-full fixed top-0  bg-white z-40 shadow-md text-primary flex justify-between items-center  p-10 xl:px-40  overflow-hidden">
       <Link href={"/"} className="text-2xl whitespace-nowrap block">
         Notaría Guerra Salas{" "}
       </Link>
@@ -28,10 +29,14 @@ export default function Navbar() {
       />
       <ul className="hidden lg:flex gap-4 xl:gap-10 text-sm md:text-lg justify-center items-center whitespace-nowrap">
         <NavbarItem link={"/"} text="Inicio" />
-        <NavbarItem link={"/servicios"} text="Servicios Notariales" />
+        <NavbarItem
+          link={"#servicios-notariales"}
+          text="Servicios Notariales"
+        />
+        <NavbarItem link={"#nosotros"} text="Nosotros" />
+
         <NavbarItem link={"/requisitos"} text="Requisitos" />
         <NavbarItem link={"/tarifario"} text="Tarifario" />
-        <NavbarItem link={"/nosotros"} text="Nosotros" />
         <NavbarItem link={"/contacto"} text="Contacto" />
       </ul>
 
@@ -40,7 +45,7 @@ export default function Navbar() {
           visibility.value
             ? "right-0  h-screen overflow-y-auto "
             : "right-full "
-        } bg-primary z-10 box-border`}
+        } bg-primary box-border`}
       >
         <X
           onClick={close}
@@ -54,9 +59,11 @@ export default function Navbar() {
           <NavbarItemSmall onclick={close} link={"/"} text="Inicio" />
           <NavbarItemSmall
             onclick={close}
-            link={"/servicios"}
+            link={"#servicios-notariales"}
             text="Servicios Notariales"
           />
+          <NavbarItemSmall onclick={close} link={"#nosotros"} text="Nosotros" />
+
           <NavbarItemSmall
             onclick={close}
             link={"/requisitos"}
@@ -67,7 +74,6 @@ export default function Navbar() {
             link={"/tarifario"}
             text="Tarifario"
           />
-          <NavbarItemSmall onclick={close} link={"/nosotros"} text="Nosotros" />
           <NavbarItemSmall onclick={close} link={"/contacto"} text="Contacto" />
         </ul>
       </div>
