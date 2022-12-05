@@ -69,20 +69,23 @@ export default function Home() {
         <h2 className="text-3xl text-primary mb-4">Nosotros</h2>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-20">
           <Image alt="notario" src={notario} className="rounded-sm w-80" />
-          <p className="text-center text-sm md:text-lg">
+          <p className="text-center text-md md:text-lg tracking-[0.01em]">
             Quiero darles la bienvenida, soy el Dr. Guillermo Guerra Salas,
             egresado de la Universidad Nacional de Trujillo de la Facultad de
             Derecho, con Maestría de Derecho en la Universidad Antenor Orrego,
-            abogado con una vasta experiencia en sector privado y público.
-            Nombrado como Notario de Trujillo desde Junio del 2007. Estoy
-            autorizado por ley, a dar fe de los actos y contratos que celebren
-            ante mí, formalizando la voluntad de los otorgantes, redactando los
-            instrumentos, a los que confiero autenticidad, y también me
-            corresponde la comprobación de los hechos y tramitación de asuntos
-            no contenciosos. Garantizamos un servicio de alta calidad, tenemos
-            un equipo joven con excelentes conocimientos en temas notariales y
-            registrales que aseguran que se concreten los objetivos de todos
-            clientes de manera rápida y eficiente.
+            abogado con una vasta experiencia en sector privado y
+            público.Nombrado como Notario de Trujillo desde Junio del 2007.
+            <br className="mb-3" />
+            Estoy autorizado por ley, a dar fe de los actos y contratos que
+            celebren ante mí, formalizando la voluntad de los otorgantes,
+            redactando los instrumentos, a los que confiero autenticidad, y
+            también me corresponde la comprobación de los hechos y tramitación
+            de asuntos no contenciosos.
+            <br className="mb-3" />
+            Garantizamos un servicio de alta calidad, tenemos un equipo joven
+            con excelentes conocimientos en temas notariales y registrales que
+            aseguran que se concreten los objetivos de todos clientes de manera
+            rápida y eficiente.
           </p>
         </div>
       </section>
