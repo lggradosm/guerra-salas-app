@@ -20,7 +20,7 @@ export default function Navbar() {
   const visibility = useBoolean();
   return (
     <nav className="h-24 w-full fixed top-0  bg-white z-40 shadow-md text-primary flex justify-between items-center  p-10 xl:px-40  overflow-hidden">
-      <Link href={"/"} className="text-2xl whitespace-nowrap block">
+      <Link href={"/"} className="text-2xl whitespace-nowrap block font-bold">
         Notaría Guerra Salas{" "}
       </Link>
       <List
@@ -30,10 +30,10 @@ export default function Navbar() {
       <ul className="hidden lg:flex gap-4 xl:gap-10 text-sm md:text-lg justify-center items-center whitespace-nowrap">
         <NavbarItem link={"/"} text="Inicio" />
         <NavbarItem
-          link={"#servicios-notariales"}
+          link={"/#servicios-notariales"}
           text="Servicios Notariales"
         />
-        <NavbarItem link={"#nosotros"} text="Nosotros" />
+        <NavbarItem link={"/#nosotros"} text="Nosotros" />
 
         <NavbarItem link={"/requisitos"} text="Requisitos" />
         <NavbarItem link={"/tarifario"} text="Tarifario" />
@@ -59,10 +59,14 @@ export default function Navbar() {
           <NavbarItemSmall onclick={close} link={"/"} text="Inicio" />
           <NavbarItemSmall
             onclick={close}
-            link={"#servicios-notariales"}
+            link={"/#servicios-notariales"}
             text="Servicios Notariales"
           />
-          <NavbarItemSmall onclick={close} link={"#nosotros"} text="Nosotros" />
+          <NavbarItemSmall
+            onclick={close}
+            link={"/#nosotros"}
+            text="Nosotros"
+          />
 
           <NavbarItemSmall
             onclick={close}

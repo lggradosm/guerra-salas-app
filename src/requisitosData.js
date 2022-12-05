@@ -1,22 +1,26 @@
+import requisito1 from "../public/images/requisitos/1.jpg";
+import requisito2 from "../public/images/requisitos/2.jpg";
+import requisito3 from "../public/images/requisitos/3.jpg";
+
 const ASUNTOS_NO_CONTENCIOSOS = "ASUNTOS_NO_CONTENCIOSOS";
 const PROTOCOLARES = "PROTOCOLARES";
 export const requisitosList = [
   {
     id: "001",
     nombre: "RECONOCIMIENTO DE PATERNIDAD DE MENOR DE EDAD",
-    imageUrl: "213123",
+    imageUrl: requisito1,
     type: PROTOCOLARES,
   },
   {
     id: "002",
     nombre: "RECONOCIMIENTO DE PATERNIDAD DE MAYOR DE EDAD",
-    imageUrl: "",
+    imageUrl: requisito2,
     type: PROTOCOLARES,
   },
   {
     id: "003",
     nombre: "COMPRAVENTA DE MOTOR O MAQUINARIA",
-    imageUrl: "",
+    imageUrl: requisito3,
     type: PROTOCOLARES,
   },
   {

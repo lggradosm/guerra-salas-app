@@ -12,7 +12,7 @@ export default function NavbarItem({ link, text }) {
     <li>
       <Link
         className={`block md:p-2 hover:scale-110 transition-transform ${
-          isActive() ? "font-bold" : ""
+          isActive() ? "font-bold text-accent" : ""
         }`}
         href={link}
       >

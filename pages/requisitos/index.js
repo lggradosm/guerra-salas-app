@@ -22,7 +22,7 @@ export default function Requisitos() {
   return (
     <section className="container  mt-28 my-4">
       <div>
-        <h1>Requisitos</h1>
+        <h2 className="text-2xl">Requisitos</h2>
         <label className="relative">
           <input
             type="text"

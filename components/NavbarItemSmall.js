@@ -9,7 +9,11 @@ export default function NavbarItemSmall({ link, text, onclick }) {
     return false;
   };
   return (
-    <li className={`  text-white ${isActive() ? "font-bold underline" : ""}`}>
+    <li
+      className={`  text-white ${
+        isActive() ? "font-bold underline text-accent" : ""
+      }`}
+    >
       <Link
         href={link}
         onClick={onclick}

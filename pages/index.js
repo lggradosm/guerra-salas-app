@@ -2,7 +2,9 @@ import Image from "next/image";
 import ScrollDrag from "../components/ScrollDrag";
 import ServiceItem from "../components/ServiceItem";
 import notario from "../public/images/Notario.webp";
+import { equipo } from "../src/equipoImg";
 export default function Home() {
+  const equipoList = equipo;
   return (
     <div className="container flex flex-col justify-center items-center scroll-smooth">
       <section className="w-full h-screen bg-[url('../public/images/edificio.webp')] bg-cover bg-bottom"></section>
@@ -66,7 +68,7 @@ export default function Home() {
         </ScrollDrag>
       </section>
       <section id="nosotros" className="w-full pt-32">
-        <h2 className="text-3xl text-primary mb-4">Nosotros</h2>
+        <h2 className="text-3xl  text-primary mb-10">Nosotros</h2>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-20">
           <Image alt="notario" src={notario} className="rounded-sm w-80" />
           <p className="text-center text-md md:text-lg tracking-[0.01em]">
@@ -87,6 +89,30 @@ export default function Home() {
             aseguran que se concreten los objetivos de todos clientes de manera
             rápida y eficiente.
           </p>
+        </div>
+        <div className="my-20 ">
+          <h3 className="text-3xl text-primary mb-4">Nuestro Equipo</h3>
+          <p>
+            En Notaría Guerra Salas mas que un equipo de Trabajo, somos una
+            familia dispuestos a atenderte con calidad, calidez y prontitud,
+            para que tu trámite sea lo mas satisfactorio para tí.
+          </p>
+          <div className="w-full flex flex-wrap gap-2 md:gap-6 justify-center mt-10">
+            {equipoList.map((employee, index) => (
+              <div
+                key={index}
+                className="w-1/4 xl:w-1/6 text-center border-2 rounded-lg group cursor-pointer p-2"
+              >
+                <Image
+                  alt={employee.nombre}
+                  src={employee.foto}
+                  className="w-full grayscale duration-300 group-hover:filter-none"
+                />
+                <h4 className="my-0 md:my-2">{employee.nombre}</h4>
+                <p>{employee.cargo}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
