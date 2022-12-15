@@ -3,7 +3,7 @@ import React from "react";
 import { Telephone, Whatsapp, GeoAlt } from "react-bootstrap-icons";
 export default function ButtonNavigation() {
   return (
-    <div className="fixed z-30 text-white text-xs items-center shadow-lg border-t-4 border-[rgba(0,0,0,.1)] justify-around bottom-0 w-full h-16  bg-primary flex">
+    <div className="md:hidden fixed z-30 text-white text-xs items-center shadow-lg border-t-4 border-[rgba(0,0,0,.1)] justify-around bottom-0 w-full h-16  bg-primary flex">
       <Link
         href={"tel://044237200 "}
         className="flex flex-col items-center justify-center flex-1 h-full"

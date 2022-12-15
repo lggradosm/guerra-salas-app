@@ -33,33 +33,43 @@ export default function Requisitos() {
           />
           <Search className="text-md absolute left-4 top-[10%] text-primary" />
         </label>
-        <div className="flex my-4 gap-6">
+        <div className="flex  my-4 gap-2 lg:gap-6 text-sm box-border">
           <button
-            className={` rounded-lg   border-2 p-3 ${
-              "PROTOCOLARES" === category
-                ? "border-primary"
+            className={`flex-1 lg:flex-none rounded-lg p-2 lg:p-3  border-2 ${
+              "ESCRITURAS_PUBLICAS" === category
+                ? "bg-primary text-white"
                 : "hover:bg-gray-100"
             }`}
-            onClick={(e) => categoryHandler(e, "PROTOCOLARES")}
+            onClick={(e) => categoryHandler(e, "ESCRITURAS_PUBLICAS")}
           >
-            PROTOCOLARES
+            ESCRITURAS PUBLICAS
           </button>
           <button
-            className={` rounded-lg   border-2 p-3 ${
+            className={`flex-1 lg:flex-none rounded-lg p-2  lg:p-3  border-2  ${
               "ASUNTOS_NO_CONTENCIOSOS" === category
-                ? "border-primary"
+                ? "bg-primary text-white"
                 : "hover:bg-gray-100"
             }`}
             onClick={(e) => categoryHandler(e, "ASUNTOS_NO_CONTENCIOSOS")}
           >
             NO CONTENCIOSOS
           </button>
+          <button
+            className={`flex-1 lg:flex-none rounded-lg p-2  lg:p-3  border-2  ${
+              "VEHICULAR" === category
+                ? "bg-primary text-white"
+                : "hover:bg-gray-100"
+            }`}
+            onClick={(e) => categoryHandler(e, "VEHICULAR")}
+          >
+            VEHICULARES
+          </button>
         </div>
         {filterList?.map((requisito, index) => (
           <Link
             href={`/requisitos/${requisito.id}`}
             key={index}
-            className="p-2 py-4 block odd:bg-gray-100 "
+            className="text-xs md:text-md p-2 py-4 block odd:bg-gray-100 "
           >
             {requisito.nombre}
           </Link>
