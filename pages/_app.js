@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import whatsapp from "../public/icons/whatsapp.svg";
 import Link from "next/link";
+import ButtonNavigation from "../components/ButtonNavigation";
 Link;
 function MyApp({ Component, pageProps }) {
   return (
@@ -19,7 +20,7 @@ function MyApp({ Component, pageProps }) {
         href={
           "https://api.whatsapp.com/send/?phone=51949881710&text&type=phone_number&app_absent=0"
         }
-        className="fixed bottom-4 right-4 cursor-pointer z-20 "
+        className="hidden md:flex fixed bottom-4 right-4 cursor-pointer z-20  "
       >
         <Image alt="whatsapp_icon" src={whatsapp} className="w-12 md:w-14" />
       </Link>
@@ -29,6 +30,7 @@ function MyApp({ Component, pageProps }) {
       </main>
 
       <Footer />
+      <ButtonNavigation />
     </div>
   );
 }

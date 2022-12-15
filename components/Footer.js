@@ -1,17 +1,17 @@
 import React from "react";
-import { LoadScript, GoogleMap, Marker } from "@react-google-maps/api";
+import ButtonNavigation from "./ButtonNavigation";
 export default function Footer() {
   return (
     <footer className=" h-20 flex flex-col">
       <div className="bg-primary text-sm text-white p-20">
         <div>
           <div>
-            <h3>Horario de atención</h3>
+            <h3 className="font-bold">Horario de atención</h3>
             <p>Lunes a Viernes: 09:00 - 13:30 15:00 - 18:00</p>
             <p>Sábados: 09:00 - 13:30</p>
           </div>
           <div>
-            <h3>Contacto</h3>
+            <h3 className="font-bold">Contacto</h3>
             <p>Av.Larco 1098 - Urb.San Andrés III Etapa, Trujillo - Perú</p>
           </div>
         </div>
@@ -23,7 +23,7 @@ export default function Footer() {
             </LoadScript> */}
       </div>
 
-      <p className="text-center text-sm p-2 text-primary">
+      <p className="text-center text-sm pb-20 md:pb-0 p-2 text-primary">
         Todos los derechos reservados &copy; 2022 Notaría Guerra Salas
       </p>
     </footer>

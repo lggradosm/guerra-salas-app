@@ -1,8 +1,6 @@
 import React from "react";
 import NavbarItem from "./NavbarItem";
 import NavbarItemSmall from "./NavbarItemSmall";
-import Image from "next/image";
-import whatsapp from "../public/icons/whatsapp.svg";
 import Link from "next/link";
 import { List, X } from "react-bootstrap-icons";
 import { useBoolean } from "../hooks/useBoolean";

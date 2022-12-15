@@ -1,71 +1,122 @@
 import Image from "next/image";
-import ScrollDrag from "../components/ScrollDrag";
 import ServiceItem from "../components/ServiceItem";
 import notario from "../public/images/Notario.webp";
 import { equipo } from "../src/equipoImg";
+import { Navigation } from "swiper";
+import { ArrowLeftShort, ArrowRightShort } from "react-bootstrap-icons";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useRef, useState } from "react";
+
 export default function Home() {
   const equipoList = equipo;
+  const nextRef = useRef();
+  const prevRef = useRef();
+  const [swiper, setSwiper] = useState();
+  useEffect(() => {
+    if (swiper) {
+      swiper.params.navigation.prevEl = prevRef?.current;
+      swiper.params.navigation.nextEl = nextRef?.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [swiper]);
+
   return (
     <div className="container flex flex-col justify-center items-center scroll-smooth">
       <section className="w-full h-screen bg-[url('../public/images/edificio.webp')] bg-cover bg-bottom"></section>
-      <section id="servicios-notariales" className="w-full pt-32">
-        <ScrollDrag style="flex  gap-10 overflow-x-auto justify-start pb-4 select-none ">
-          <ServiceItem
-            title={"Escrituras Públicas"}
-            text={
-              "Compra-Ventas de Inmuebles, Inmovilización de Partidas, Poderes, Constitución de Sociedades, Hipotecas, Anticipo de Legítima, Creaciones y modificaciones de Empresas, Donaciones y Contratos Privados."
-            }
-          />
 
-          <ServiceItem
-            title={"Transferencia Vechiculares"}
-            text={
-              "Hacemos un acta con todos los aspectos de la transferencia, inscribimos en Registros Públicos el nuevo cambio de dueño del vehículo. La compraventa se hará efectiva y serás el propietario del vehículo oficialmente."
-            }
-          />
+      <section
+        id="servicios-notariales"
+        className="w-full relative pt-32 lg:px-14 box-border"
+      >
+        <Swiper
+          navigation={{ prevEl: prevRef?.current, nextEl: nextRef }}
+          modules={[Navigation]}
+          onSwiper={setSwiper}
+          slidesPerView={"auto"}
+          spaceBetween={60}
+          observer
+          className="w-full swiper"
+        >
+          <SwiperSlide className="swiper-slide">
+            <ServiceItem
+              title={"Escrituras Públicas"}
+              text={
+                "Compra-Ventas de Inmuebles, Inmovilización de Partidas, Poderes, Constitución de Sociedades, Hipotecas, Anticipo de Legítima, Creaciones y modificaciones de Empresas, Donaciones y Contratos Privados."
+              }
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServiceItem
+              title={"Transferencia Vechiculares"}
+              text={
+                "Hacemos un acta con todos los aspectos de la transferencia, inscribimos en Registros Públicos el nuevo cambio de dueño del vehículo. La compraventa se hará efectiva y serás el propietario del vehículo oficialmente."
+              }
+            />
+          </SwiperSlide>
 
-          <ServiceItem
-            title={"Asuntos no Contenciosos"}
-            text={
-              "Solucionamos tus procesos sin controversia fuera de la Corte, como Sucesiones Intestadas, Rectificaciones, Divorcios, Uniones de Hecho, Convocatorias a junta de Accionistas y Directorios, Adopción, Prescripciones, Inventarios y similares."
-            }
-          />
+          <SwiperSlide>
+            <ServiceItem
+              title={"Asuntos no Contenciosos"}
+              text={
+                "Solucionamos tus procesos sin controversia fuera de la Corte, como Sucesiones Intestadas, Rectificaciones, Divorcios, Uniones de Hecho, Convocatorias a junta de Accionistas y Directorios, Adopción, Prescripciones, Inventarios y similares."
+              }
+            />
+          </SwiperSlide>
 
-          <ServiceItem
-            title={"Autorización de Viaje"}
-            text={
-              "Las Autorizaciones de viaje de menores, las otorga el notario mediante acta a fin de dar fe que la persona que autoriza el viaje de un menor de edad sea el Padre o la persona legalmente idónea."
-            }
-          />
+          <SwiperSlide>
+            <ServiceItem
+              title={"Autorización de Viaje"}
+              text={
+                "Las Autorizaciones de viaje de menores, las otorga el notario mediante acta a fin de dar fe que la persona que autoriza el viaje de un menor de edad sea el Padre o la persona legalmente idónea."
+              }
+            />
+          </SwiperSlide>
 
-          <ServiceItem
-            title={"Certificación de Actas"}
-            text={
-              "Se da fe de las Actas contenidas en los Libros de las Sociedades o Asociaciones, transcribiendo su contenido en documentos certificados."
-            }
-          />
+          <SwiperSlide>
+            <ServiceItem
+              title={"Certificación de Actas"}
+              text={
+                "Se da fe de las Actas contenidas en los Libros de las Sociedades o Asociaciones, transcribiendo su contenido en documentos certificados."
+              }
+            />
+          </SwiperSlide>
 
-          <ServiceItem
-            title={"Legalizaciones"}
-            text={
-              "Legalización de firmas da fe que es auténtica y pertenece al que ha firmado frente al notario, identificado a la persona con documento identidad. Legalización de Copias, certificando que es igual al original. Legalización de Libros se da al sellar las hojas de un libro de actas o contable."
-            }
-          />
+          <SwiperSlide>
+            <ServiceItem
+              title={"Legalizaciones"}
+              text={
+                "Legalización de firmas da fe que es auténtica y pertenece al que ha firmado frente al notario, identificado a la persona con documento identidad. Legalización de Copias, certificando que es igual al original. Legalización de Libros se da al sellar las hojas de un libro de actas o contable."
+              }
+            />
+          </SwiperSlide>
 
-          <ServiceItem
-            title={"Protestos"}
-            text={
-              "El protesto es un acto notarial en el que se acredita que no se ha realizado el pago de una letra de cambio o un Título Valor, para el cual se hace un procedimiento de protesto del Titulo Valor en la notaría para poder realizar el cobro de la misma."
-            }
-          />
+          <SwiperSlide>
+            <ServiceItem
+              title={"Protestos"}
+              text={
+                "El protesto es un acto notarial en el que se acredita que no se ha realizado el pago de una letra de cambio o un Título Valor, para el cual se hace un procedimiento de protesto del Titulo Valor en la notaría para poder realizar el cobro de la misma."
+              }
+            />
+          </SwiperSlide>
 
-          <ServiceItem
-            title={"Cartas Notariales"}
-            text={
-              "La carta notarial es aquella carta remitida por un notario, el cual debe certificar la fecha de emisión y recepción. Evitando discusiones sobre si la carta llegó o no a tiempo. El notario, en todo momento indicara la fecha de recepción de la carta."
-            }
-          />
-        </ScrollDrag>
+          <SwiperSlide>
+            <ServiceItem
+              title={"Cartas Notariales"}
+              text={
+                "La carta notarial es aquella carta remitida por un notario, el cual debe certificar la fecha de emisión y recepción. Evitando discusiones sobre si la carta llegó o no a tiempo. El notario, en todo momento indicara la fecha de recepción de la carta."
+              }
+            />
+          </SwiperSlide>
+        </Swiper>
+        <div className="absolute lg:top-[calc(50%+2rem)] left-0" ref={prevRef}>
+          <ArrowLeftShort className="w-10 h-10 cursor-pointer" />
+        </div>
+        <div className="absolute lg:top-[calc(50%+2rem)] right-0" ref={nextRef}>
+          <ArrowRightShort className="w-10 h-10 cursor-pointer" />
+        </div>
       </section>
       <section id="nosotros" className="w-full pt-32">
         <h2 className="text-3xl  text-primary mb-10">Nosotros</h2>
