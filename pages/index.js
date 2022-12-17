@@ -111,10 +111,10 @@ export default function Home() {
             />
           </SwiperSlide>
         </Swiper>
-        <div className="absolute lg:top-[calc(50%+2rem)] left-0" ref={prevRef}>
+        <div className="absolute lg:top-[calc(50%-1rem)] left-0" ref={prevRef}>
           <ArrowLeftShort className="w-10 h-10 cursor-pointer" />
         </div>
-        <div className="absolute lg:top-[calc(50%+2rem)] right-0" ref={nextRef}>
+        <div className="absolute lg:top-[calc(50%-1rem)] right-0" ref={nextRef}>
           <ArrowRightShort className="w-10 h-10 cursor-pointer" />
         </div>
       </section>
