@@ -48,9 +48,9 @@ export default function Navbar() {
           className="lg:hidden cursor-pointer text-5xl block text-white absolute right-4 top-4"
         />
         <ul
-          className={` h-[20rem] w-full gap-[2rem] duration-300 ${
+          className={` w-full gap-[3rem] duration-300  ${
             visibility.value ? "opacity-100 " : "opacity-0"
-          }  flex flex-col text-sm justify-around items-stretch whitespace-nowrap`}
+          }  flex flex-col text-sm justify-between items-stretch whitespace-nowrap`}
         >
           <NavbarItemSmall onclick={close} link={"/"} text="Inicio" />
           <NavbarItemSmall

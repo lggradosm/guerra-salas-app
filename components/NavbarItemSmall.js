@@ -17,7 +17,7 @@ export default function NavbarItemSmall({ link, text, onclick }) {
       <Link
         href={link}
         onClick={onclick}
-        className="p-1 w-full flex items-center justify-center"
+        className=" w-full flex items-center justify-center"
       >
         {text}
       </Link>
