@@ -17,7 +17,7 @@ export default function Navbar() {
 
   const visibility = useBoolean();
   return (
-    <nav className="h-24 w-full fixed top-0  bg-white z-40 shadow-md text-primary flex justify-between items-center  p-10 xl:px-40  overflow-hidden">
+    <nav className="h-10 w-full fixed top-0  bg-white z-40 shadow-md text-primary flex justify-between items-center  p-9 xl:px-40  overflow-hidden">
       <Link href={"/"} className="text-2xl whitespace-nowrap block font-bold">
         Notaría Guerra Salas{" "}
       </Link>
@@ -39,10 +39,8 @@ export default function Navbar() {
       </ul>
 
       <div
-        className={` fixed flex items-center justify-center overflow-hidden  top-0 bottom-0   left-0 duration-500  ${
-          visibility.value
-            ? "right-0  h-screen overflow-y-auto "
-            : "right-full "
+        className={` fixed h-screen flex items-center justify-center overflow-hidden  top-0 bottom-0 py-[2rem]  left-0 duration-500  ${
+          visibility.value ? "right-0  overflow-y-auto " : "right-full "
         } bg-primary box-border`}
       >
         <X
@@ -50,7 +48,7 @@ export default function Navbar() {
           className="lg:hidden cursor-pointer text-5xl block text-white absolute right-4 top-4"
         />
         <ul
-          className={` h-[20rem] w-full gap-2 duration-300 ${
+          className={` h-[20rem] w-full gap-[2rem] duration-300 ${
             visibility.value ? "opacity-100 " : "opacity-0"
           }  flex flex-col text-sm justify-around items-stretch whitespace-nowrap`}
         >

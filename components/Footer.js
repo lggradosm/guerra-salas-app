@@ -22,10 +22,11 @@ export default function Footer() {
 
             </LoadScript> */}
       </div>
-
-      <p className="text-center text-sm pb-20 md:pb-0 p-2 text-primary">
-        Todos los derechos reservados &copy; 2022 Notaría Guerra Salas
-      </p>
+      <div className="flex items-center justify-center mt-3  pb-20  md:pb-0 md:mt-0">
+        <p className="text-xs lg:text-sm  text-primary ">
+          Todos los derechos reservados &copy; 2022 Notaría Guerra Salas
+        </p>
+      </div>
     </footer>
   );
 }

@@ -25,11 +25,11 @@ export default function Home() {
 
   return (
     <div className="container flex flex-col justify-center items-center scroll-smooth">
-      <section className="w-full h-screen bg-[url('../public/images/edificio.webp')] bg-cover bg-bottom"></section>
+      <section className="w-full py-[5rem] h-screen bg-[url('../public/images/edificio.webp')] bg-cover bg-bottom"></section>
 
       <section
         id="servicios-notariales"
-        className="w-full relative pt-32 lg:px-14 box-border"
+        className="w-full relative py-[5rem] lg:px-14 box-border"
       >
         <Swiper
           navigation={{ prevEl: prevRef?.current, nextEl: nextRef }}
@@ -118,7 +118,7 @@ export default function Home() {
           <ArrowRightShort className="w-10 h-10 cursor-pointer" />
         </div>
       </section>
-      <section id="nosotros" className="w-full pt-32">
+      <section id="nosotros" className="w-full py-[5rem]">
         <h2 className="text-3xl  text-primary mb-10">Nosotros</h2>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-20">
           <Image alt="notario" src={notario} className="rounded-sm w-80" />
