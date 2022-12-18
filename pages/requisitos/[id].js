@@ -37,7 +37,7 @@ export default function RequisitoDetail() {
         <Image
           src={requisito.imageUrl}
           alt={imageName}
-          loading="lazy"
+          placeholder="blur"
           className="w-full"
         />
       )}
