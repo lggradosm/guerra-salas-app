@@ -11,6 +11,7 @@ export default function RequisitoDetail() {
   const requisitoId = router.query.id;
   const requisito = requisitoFetch().searchById(requisitoId);
   const imageName = requisito?.nombre.split(" ").join("-");
+  console.log(requisito);
 
   const saveImageHandler = () => {
     // const url = window.URL.createObjectURL(new Blob(requisito.imageUrl));
@@ -33,7 +34,12 @@ export default function RequisitoDetail() {
         </div>
       </div>
       {requisito && (
-        <Image src={requisito.imageUrl} alt={imageName} className="w-full" />
+        <Image
+          src={requisito.imageUrl}
+          alt={imageName}
+          loading="lazy"
+          className="w-full"
+        />
       )}
     </div>
   );

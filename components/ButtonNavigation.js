@@ -13,7 +13,7 @@ export default function ButtonNavigation() {
       </Link>
       <Link
         href={
-          "https://www.google.com/maps/dir//''/@-8.1219289,-79.0410366,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x91ad3d73ac2ae53f:0x772050a20d95e18c!2m2!1d-79.0385966!2d-8.1239214"
+          "https://www.google.com/maps/dir/''/@-8.1219289,-79.0410366,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x91ad3d73ac2ae53f:0x772050a20d95e18c!2m2!1d-79.0385966!2d-8.1239214"
         }
         target={"_blank"}
         className="flex flex-col items-center justify-center  flex-1  h-full"
