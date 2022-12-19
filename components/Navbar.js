@@ -34,8 +34,6 @@ export default function Navbar() {
         <NavbarItem link={"/#nosotros"} text="Nosotros" />
 
         <NavbarItem link={"/requisitos"} text="Requisitos" />
-        <NavbarItem link={"/tarifario"} text="Tarifario" />
-        <NavbarItem link={"/contacto"} text="Contacto" />
       </ul>
 
       <div
@@ -69,12 +67,6 @@ export default function Navbar() {
             link={"/requisitos"}
             text="Requisitos"
           />
-          <NavbarItemSmall
-            onclick={close}
-            link={"/tarifario"}
-            text="Tarifario"
-          />
-          <NavbarItemSmall onclick={close} link={"/contacto"} text="Contacto" />
         </ul>
       </div>
     </nav>
